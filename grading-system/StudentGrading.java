@@ -1,4 +1,7 @@
-	public static boolean validateStudentNumber(long studentNum){
+public static boolean validCourse(String courseName){
+		return courseName.equalsIgnoreCase(COURSE1) || courseName.equalsIgnoreCase(COURSE2) || courseName.equalsIgnoreCase(COURSE3);
+	}
+public static boolean validateStudentNumber(long studentNum){
 		String numStr = String.valueOf(studentNum);
 		return numStr.length() == 9 && numStr.substring(0,4).equals("2025");
 	}
