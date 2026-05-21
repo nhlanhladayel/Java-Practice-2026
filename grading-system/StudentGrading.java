@@ -1,3 +1,20 @@
+import java.util.Scanner;
+public class StudentGrading{
+	static final String COURSE1 = "Computer Science";
+	static final String COURSE2 = "Information Systems";
+	static final String COURSE3 = "Software Engineering";
+	
+	static int courseStud1 = 0;
+	static int courseStud2 = 0;
+	static int courseStud3 = 0;
+	
+	static int studPassed1 = 0;
+	static int studPassed2 = 0;
+	static int studPassed3 = 0;
+	
+	static int highestMark = 0;
+	static long highestStud = 0;
+	
 public static void displayResults(){
 		System.out.println("/n=====FINAL RESULTS====");
 		
