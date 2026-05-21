@@ -1,3 +1,6 @@
+public static boolean validateMark(int mark){
+		return mark >= 0 && mark <= 100;
+	}
 public static boolean validCourse(String courseName){
 		return courseName.equalsIgnoreCase(COURSE1) || courseName.equalsIgnoreCase(COURSE2) || courseName.equalsIgnoreCase(COURSE3);
 	}
