@@ -1,3 +1,23 @@
+public static void displayResults(){
+		System.out.println("/n=====FINAL RESULTS====");
+		
+		if(courseStud1 > 0){
+			double percentage = (studPassed1 * 100) / courseStud1;
+			System.out.println(COURSE1 + " pass %: " + percentage);
+		}
+		
+		if(courseStud2 > 0){
+			double percentage = (studPassed2 * 100) / courseStud2;
+			System.out.println(COURSE2 + " pass %: " + percentage);
+		}
+		
+		if(courseStud3 > 0){
+			double percentage = (studPassed3 * 100) / courseStud3;
+			System.out.println(COURSE3 + " pass %: " + percentage);
+		}
+		System.out.println("Highest Student: " + highestStud);
+        System.out.println("Highest Mark: " + highestMark);
+	}
 public static void recordMarks(long studentNum, int mark, String courseName){
 		if(courseName.equalsIgnoreCase(COURSE1)){
 			courseStud1++;
