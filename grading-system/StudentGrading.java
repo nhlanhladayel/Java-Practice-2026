@@ -1,3 +1,27 @@
+public static void recordMarks(long studentNum, int mark, String courseName){
+		if(courseName.equalsIgnoreCase(COURSE1)){
+			courseStud1++;
+		if(mark >= 50){
+				studPassed1++;
+			}
+		}
+		else if(courseName.equalsIgnoreCase(COURSE2)){
+			courseStud1++;
+			if(mark >= 50){
+				studPassed2++;
+			}
+		}
+		else if(courseName.equalsIgnoreCase(COURSE3)){
+			courseStud3++;
+			if(mark >= 50){
+				studPassed3++;
+			}
+		}
+		if(mark > highestMark){
+			highestMark = mark;
+			highestStud = studentNum;
+		}
+	}
 public static String determineGrade(int mark){
 		String finalGrade = "";
 		if(mark >= 75){
