@@ -1,3 +1,18 @@
+public static String determineGrade(int mark){
+		String finalGrade = "";
+		if(mark >= 75){
+			finalGrade = "A";
+		}else if(mark >= 65){
+			finalGrade = "B";
+		}else if(mark >= 50){
+			finalGrade = "C";
+		}else if(mark >= 40){
+			finalGrade = "D";
+		}else if(mark < 40){
+			finalGrade = "F";
+		}
+		return finalGrade;
+	}
 public static boolean validateMark(int mark){
 		return mark >= 0 && mark <= 100;
 	}
