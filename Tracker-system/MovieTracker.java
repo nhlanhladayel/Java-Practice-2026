@@ -32,9 +32,9 @@ public class MovieTracker{
 	}
 	public static String abbreviateGenre(String genre){
 		String upperCase = genre.toUpperCase();
-		if(upperCase == "ACTION"){
+		if(upperCase.equalsIgnoreCase("ACTION")){
 			upperCase = "AC";
-		}else if(upperCase == "COMEDY"){
+		}else if(upperCase.equalsIgnoreCase("COMEDY")){
 			upperCase = "CO";
 		}else{
 			return upperCase.substring(0,1);
