@@ -28,31 +28,38 @@ public class MathTutor{
 		
 		System.out.print("Enter your name: ");
 		String name = kb.nextLine();
-		int num1 = rand.nextInt(9) + 1;
-		int num2 = rand.nextInt(9) + 1;
-		while(true){
+		
+		boolean keepPlaying = true;
+		while(keepPlaying){
+			int num1 = rand.nextInt(9) + 1;
+			int num2 = rand.nextInt(9) + 1;
+			
 			String num = createQuestion(num1,num2);
 			System.out.print(num);
 			int answer = kb.nextInt();
-			kb.nextLine();
 			
-			if(answerCorrect(num1,num2,answer)){
-				System.out.println("Congratulations " + name + " " + answer + " is correct!");
-			}else{
-				String hintAnswer = hint(num1,num2,answer);
-				System.out.println(hintAnswer);
+			while(true){
+				
+				if(answerCorrect(num1,num2,answer)){
+					System.out.println("Congratulations " + name + " " + answer + " is correct!");
+					System.out.print("Do you still want to play?: ");
+					char choice = kb.next().charAt(0);
+			
+					if(choice != 'y' && choice != 'Y'){
+						keepPlaying = false;
+					}
+					break;
+					
+				}else{
+					String hintAnswer = hint(num1,num2,answer);
+					System.out.println(hintAnswer);
+					
+					num = createQuestion(num1,num2);
+					System.out.print(num);
+					answer = kb.nextInt();
+				}
 			}
 			
-			System.out.print("Do you still want to play?: ");
-			char choice = kb.next().charAt(0);
-			
-			if(choice == 'y' || choice == 'Y'){
-				num = createQuestion(num1,num2);
-				System.out.print(num);
-				answer = kb.nextInt();
-			}else{
-				break;
-			}
 		}
 	}
 }
