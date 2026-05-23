@@ -71,8 +71,7 @@ public class MovieTracker{
 		String movie3 = "HORROR";
 		String movie4 = "ROMANCE";
 		
-		boolean validAge = true;
-		while(validAge){
+		while(true){
 			System.out.print("Enter customer age (or 0 to exit): ");
 			int age = kb.nextInt();
 			if(age == 0){
@@ -82,10 +81,10 @@ public class MovieTracker{
 				System.out.print("Does customer have membership? (y/n): ");
 				char activeMember = kb.next().charAt(0);
 				kb.nextLine();
-				validAge = false;
 				
 				boolean validGenre = true;
-				while(validGenre){
+				if(activeMember == 'y' || activeMember == 'Y'){
+					while(validGenre){
 					System.out.print("Enter favourite genre (Action, Comedy, Horror, Romance): ");
 					String genre = kb.nextLine();
 				
@@ -93,9 +92,8 @@ public class MovieTracker{
 						String abbreviated = abbreviateGenre(genre);
 						System.out.println("Abbreviated: " + abbreviated);
 						validGenre = false;
-					}
-					
-					if(genre.equalsIgnoreCase(movie1)){
+						
+						if(genre.equalsIgnoreCase(movie1)){
 						actionCount++;
 					}if(genre.equalsIgnoreCase(movie2)){
 						comedyCount++;
@@ -105,6 +103,7 @@ public class MovieTracker{
 						romanceCount++;
 					}
 					total++;
+					}
 				}
 				
 			}
@@ -116,5 +115,6 @@ public class MovieTracker{
 		if(total > 0){
 			displayResults(actionCount,comedyCount,horrorCount,romanceCount,total,movie1,movie2,movie3,movie4);
 		}
+	}
 	}
 }
