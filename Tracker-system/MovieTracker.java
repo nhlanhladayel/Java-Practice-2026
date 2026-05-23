@@ -1,5 +1,8 @@
 import java.util.Scanner;
 public class MovieTracker{
+	public static void displayResults(int actionCount, int comedyCount, int horrorCount, int romanceCount, int total, String movie1, String movie2, String movie3, String movie4){
+		
+	}
 	public static String abbreviateGenre(String genre){
 		String upperCase = genre.toUpperCase();
 		if(upperCase == "ACTION"){
@@ -36,10 +39,10 @@ public class MovieTracker{
 		int romanceCount = 0;
 		int total = 0;
 		
-		String movie1 = "FICTION";
-		String movie2 = "NONFICTION";
-		String movie3 = "MYSTERY";
-		String movie4 = "FANTASY";
+		String movie1 = "ACTION";
+		String movie2 = "COMEDY";
+		String movie3 = "HORROR";
+		String movie4 = "ROMANCE";
 		
 		boolean validAge = true;
 		while(validAge){
@@ -60,10 +63,9 @@ public class MovieTracker{
 					String genre = kb.nextLine();
 				
 					if(validGenreName(movie1,movie2,movie3,movie4,genre)){
-						validGenre = false;
 						String abbreviated = abbreviateGenre(genre);
 						System.out.println("Abbreviated: " + abbreviated);
-						
+						validGenre = false;
 					}
 				}
 			}
