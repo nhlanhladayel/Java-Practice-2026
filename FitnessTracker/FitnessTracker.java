@@ -1,7 +1,34 @@
 import java.util.Scanner;
 public class FitnessTracker{
 	public static void displayMetrics(int cardioC, int coreC, int pilatesC, int strengthC, int total, String a1, String a2, String a3, String a4){
+		System.out.println("====RESULTS====");
 		
+		double perc1 = (cardioC / (double) total) * 100;
+		System.out.printf("%.2f%%%n",a1,perc1);
+		double perc2 = (coreC / (double) total) * 100;
+		System.out.printf("%.2f%%%n",a2,perc2);
+		double perc3 = (pilatesC / (double) total) * 100;
+		System.out.printf("%.2f%%%n",a3,perc3);
+		double perc4 = (strengthC / (double) total) * 100;
+		System.out.printf("%.2f%%%n",a4,perc4);
+		
+		String popular = a1;
+		int max = cardioC;
+		
+		if(coreC > max){
+			max = coreC;
+			popular = a2;
+		}
+		if(pilatesC > max){
+			max = pilatesC;
+			popular = a3;
+		}
+		if(strengthC > max){
+			max = strengthC;
+			popular = a4;
+		}
+		
+		System.out.println("Most popular: " + popular);
 	}
 	public static String abbreviateActivity(String activity){
 		String upperCased = activity.toUpperCase();
@@ -96,6 +123,11 @@ public class FitnessTracker{
 				
 			 }
 			
+		}
+		if(total > 0){
+			displayMetrics(cardioC,coreC,pilatesC,strengthC,total,a1,a2,a3,a4);
+		}else{
+			System.out.println("No popular found.");
 		}
 		
 	}
