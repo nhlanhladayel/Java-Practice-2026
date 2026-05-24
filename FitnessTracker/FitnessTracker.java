@@ -4,13 +4,13 @@ public class FitnessTracker{
 		System.out.println("====RESULTS====");
 		
 		double perc1 = (cardioC / (double) total) * 100;
-		System.out.printf("%.2f%%%n",a1,perc1);
+		System.out.printf("%s: %.2f%%%n",a1,perc1);
 		double perc2 = (coreC / (double) total) * 100;
-		System.out.printf("%.2f%%%n",a2,perc2);
+		System.out.printf("%s: %.2f%%%n",a2,perc2);
 		double perc3 = (pilatesC / (double) total) * 100;
-		System.out.printf("%.2f%%%n",a3,perc3);
+		System.out.printf("%s: %.2f%%%n",a3,perc3);
 		double perc4 = (strengthC / (double) total) * 100;
-		System.out.printf("%.2f%%%n",a4,perc4);
+		System.out.printf("%s: %.2f%%%n",a4,perc4);
 		
 		String popular = a1;
 		int max = cardioC;
@@ -73,9 +73,7 @@ public class FitnessTracker{
 		
 		int total = 0;
 		
-		boolean validAge = true;
-		
-		while(validAge){
+		while(true){
 			System.out.print("Enter member age (or 0 to exit): ");
 			int age = kb.nextInt();
 			
@@ -94,12 +92,10 @@ public class FitnessTracker{
 						
 						System.out.print("Enter favourite activity (Cardio, Core, Pilates, Strength): ");
 						String activity = kb.nextLine();
-						validAge = false;
 						
 						if(validActivityName(a1,a2,a3,a4,activity)){
 							String abbriviated = abbreviateActivity(activity);
 							validAct = false;
-							
 							System.out.println("Abbriviated: " + abbriviated);
 							
 							if(activity.equalsIgnoreCase(a1)){
