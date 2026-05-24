@@ -1,5 +1,8 @@
 import java.util.Scanner;
 public class FitnessTracker{
+	public static void displayMetrics(int cardioC, int coreC, int pilatesC, int strengthC, int total, String a1, String a2, String a3, String a4){
+		
+	}
 	public static String abbreviateActivity(String activity){
 		String upperCased = activity.toUpperCase();
 		if(upperCased.equalsIgnoreCase("CARDIO")){
@@ -39,7 +42,7 @@ public class FitnessTracker{
 		int cardioC = 0;
 		int coreC = 0; 
 		int pilatesC = 0;
-		int strength = 0;
+		int strengthC = 0;
 		
 		int total = 0;
 		
@@ -72,6 +75,19 @@ public class FitnessTracker{
 							
 							System.out.println("Abbriviated: " + abbriviated);
 							
+							if(activity.equalsIgnoreCase(a1)){
+								cardioC++;
+							}
+							if(activity.equalsIgnoreCase(a2)){
+								coreC++;
+							}
+							if(activity.equalsIgnoreCase(a3)){
+								pilatesC++;
+							}
+							if(activity.equalsIgnoreCase(a4)){
+								strengthC++;
+							}
+							total++;
 						}
 					}	
 				}else{
