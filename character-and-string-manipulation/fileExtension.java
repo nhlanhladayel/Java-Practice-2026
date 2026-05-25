@@ -1,4 +1,10 @@
-	public static boolean validateStudNum(long studNum){
+import java.util.Scanner;
+public class fileExtension{
+	public static void displayDetails(String ini, String extension,long studNum){
+		System.out.println("File downloading...\nFile downloaded");
+		System.out.println(studNum + "_" + ini + "." + extension);
+	}
+public static boolean validateStudNum(long studNum){
 		String numStr = String.valueOf(studNum);
 		if(numStr.length() == 9 && numStr.substring(0,4).equals("2025") ){
 			System.out.println("Correct student number format!");
