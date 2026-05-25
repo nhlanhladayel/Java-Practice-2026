@@ -4,7 +4,7 @@ public class fileExtension{
 		System.out.println("File downloading...\nFile downloaded");
 		System.out.println(studNum + "_" + ini + "." + extension);
 	}
-public static boolean validateStudNum(long studNum){
+	public static boolean validateStudNum(long studNum){
 		String numStr = String.valueOf(studNum);
 		if(numStr.length() == 9 && numStr.substring(0,4).equals("2025") ){
 			System.out.println("Correct student number format!");
@@ -14,7 +14,7 @@ public static boolean validateStudNum(long studNum){
 			return false;
 		}
 	}
-public static String getInitials(String fullnames){
+	public static String getInitials(String fullnames){
 		fullnames = fullnames.trim();
 		String[] parts = fullnames.split(" ");
 		String initials = "";
@@ -25,7 +25,7 @@ public static String getInitials(String fullnames){
 		}
 		return initials + surname;
 	}
-public static void main(String[] args){
+	public static void main(String[] args){
 		Scanner kb = new Scanner(System.in);
 		String extension;
 		
