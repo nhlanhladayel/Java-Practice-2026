@@ -77,6 +77,15 @@ public class verifyPassword{
 		}
 		return upper > 0;
 	}
+	public static boolean validateCard(long studentCard){
+		String numStr = String.valueOf(studentCard);
+		if(numStr.length() == 9 && numStr.substring(0,4).equals("2026")){
+			return true;
+		}else{
+			System.out.println("Invalid student number!");
+			return false;
+		}
+	}
 	public static void main(String[] args){
 		Scanner kb = new Scanner(System.in);
 		
@@ -86,9 +95,12 @@ public class verifyPassword{
 		int countSpecial = 0;
 		
 		while(true){
-			System.out.print("Enter your password: ");
-			String password = kb.nextLine();
-		
+			System.out.print("Enter your student card: ");
+			long studentCard = kb.nextLong();
+			kb.nextLine();
+			if(validateCard(studentCard)){
+				System.out.print("Enter your password: ");
+				String password = kb.nextLine();
 			if(password.length() < 8){
 				System.out.println("Password must be atleast 8 or more...");
 				continue;
@@ -127,7 +139,9 @@ public class verifyPassword{
 					break;
 				}
 			}
-		}	
+		}
+		
+	}		
 	
 	}
 }
