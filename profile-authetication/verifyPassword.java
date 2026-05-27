@@ -1,4 +1,14 @@
-	public static int countLower(String password, int lowerCount){
+	public static boolean checkSpecial(String password){
+		int speacial = 0;
+		for(int i = 0; i < password.length(); i++){
+			char ch = password.charAt(i);
+			if(!Character.isLetterOrDigit(ch)){
+				speacial++;
+			}
+		}
+		return speacial > 0;
+	}
+public static int countLower(String password, int lowerCount){
 		for(int i = 0; i < password.length(); i++){
 			char ch = password.charAt(i);
 			if(Character.isLowerCase(ch)){
