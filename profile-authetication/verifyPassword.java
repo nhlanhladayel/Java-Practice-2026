@@ -1,4 +1,13 @@
-	public static boolean checkUpper(String password){
+	public static int countUpper(String password, int upperCount){
+		for(int i = 0; i < password.length(); i++){
+			char ch = password.charAt(i);
+			if(Character.isUpperCase(ch)){
+				upperCount++;
+			}
+		}
+		return upperCount;
+	}
+public static boolean checkUpper(String password){
 		int upper = 0;
 		for(int i = 0; i < password.length(); i++){
 			char ch = password.charAt(i);
