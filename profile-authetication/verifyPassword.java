@@ -1,4 +1,14 @@
-	public static int countUpper(String password, int upperCount){
+	public static boolean checkLower(String password){
+		int lower = 0;
+		for(int i = 0; i < password.length(); i++){
+			char ch = password.charAt(i);
+			if(Character.isLowerCase(ch)){
+				lower++;
+			}
+		}
+		return lower > 0;
+	}
+public static int countUpper(String password, int upperCount){
 		for(int i = 0; i < password.length(); i++){
 			char ch = password.charAt(i);
 			if(Character.isUpperCase(ch)){
