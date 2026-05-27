@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class verifyPassword{
-public static int countDigit(String password, int countDigit){
+	public static int countDigit(String password, int countDigit){
 		for(int i = 0; i < password.length(); i++){
 			char ch = password.charAt(i);
 			if(Character.isDigit(ch)){
@@ -9,7 +9,7 @@ public static int countDigit(String password, int countDigit){
 		}
 		return countDigit;
 	}
-public static boolean checkDigit(String password){
+	public static boolean checkDigit(String password){
 		int digit = 0;
 		for(int i = 0; i < password.length(); i++){
 			char ch = password.charAt(i);
@@ -19,7 +19,7 @@ public static boolean checkDigit(String password){
 		}
 		return digit > 0;
 	}
-public static int countSpecial(String password, int countSpecial){
+	public static int countSpecial(String password, int countSpecial){
 		for(int i = 0; i < password.length(); i++){
 			char ch = password.charAt(i);
 			if(!Character.isLetterOrDigit(ch)){
@@ -28,7 +28,7 @@ public static int countSpecial(String password, int countSpecial){
 		}
 		return countSpecial;
 	}
-public static boolean checkSpecial(String password){
+	public static boolean checkSpecial(String password){
 		int speacial = 0;
 		for(int i = 0; i < password.length(); i++){
 			char ch = password.charAt(i);
@@ -38,7 +38,7 @@ public static boolean checkSpecial(String password){
 		}
 		return speacial > 0;
 	}
-public static int countLower(String password, int lowerCount){
+	public static int countLower(String password, int lowerCount){
 		for(int i = 0; i < password.length(); i++){
 			char ch = password.charAt(i);
 			if(Character.isLowerCase(ch)){
@@ -47,7 +47,7 @@ public static int countLower(String password, int lowerCount){
 		}
 		return lowerCount;
 	}
-public static boolean checkLower(String password){
+	public static boolean checkLower(String password){
 		int lower = 0;
 		for(int i = 0; i < password.length(); i++){
 			char ch = password.charAt(i);
@@ -57,7 +57,7 @@ public static boolean checkLower(String password){
 		}
 		return lower > 0;
 	}
-public static int countUpper(String password, int upperCount){
+	public static int countUpper(String password, int upperCount){
 		for(int i = 0; i < password.length(); i++){
 			char ch = password.charAt(i);
 			if(Character.isUpperCase(ch)){
@@ -66,7 +66,7 @@ public static int countUpper(String password, int upperCount){
 		}
 		return upperCount;
 	}
-public static boolean checkUpper(String password){
+	public static boolean checkUpper(String password){
 		int upper = 0;
 		for(int i = 0; i < password.length(); i++){
 			char ch = password.charAt(i);
@@ -77,7 +77,7 @@ public static boolean checkUpper(String password){
 		}
 		return upper > 0;
 	}
-public static void main(String[] args){
+	public static void main(String[] args){
 		Scanner kb = new Scanner(System.in);
 		
 		int lowerCount = 0;
