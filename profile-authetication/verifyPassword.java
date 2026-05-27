@@ -1,4 +1,13 @@
-	public static boolean checkDigit(String password){
+public static int countDigit(String password, int countDigit){
+		for(int i = 0; i < password.length(); i++){
+			char ch = password.charAt(i);
+			if(Character.isDigit(ch)){
+				countDigit++;
+			}
+		}
+		return countDigit;
+	}
+public static boolean checkDigit(String password){
 		int digit = 0;
 		for(int i = 0; i < password.length(); i++){
 			char ch = password.charAt(i);
