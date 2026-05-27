@@ -1,4 +1,15 @@
-	public static void main(String[] args){
+	public static boolean checkUpper(String password){
+		int upper = 0;
+		for(int i = 0; i < password.length(); i++){
+			char ch = password.charAt(i);
+			
+			if(Character.isUpperCase(ch)){
+				upper++;
+			}
+		}
+		return upper > 0;
+	}
+public static void main(String[] args){
 		Scanner kb = new Scanner(System.in);
 		
 		int lowerCount = 0;
