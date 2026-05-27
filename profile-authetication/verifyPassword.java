@@ -1,3 +1,5 @@
+import java.util.Scanner;
+public class verifyPassword{
 public static int countDigit(String password, int countDigit){
 		for(int i = 0; i < password.length(); i++){
 			char ch = password.charAt(i);
