@@ -1,4 +1,13 @@
-	public static boolean checkSpecial(String password){
+public static int countSpecial(String password, int countSpecial){
+		for(int i = 0; i < password.length(); i++){
+			char ch = password.charAt(i);
+			if(!Character.isLetterOrDigit(ch)){
+				countSpecial++;
+			}
+		}
+		return countSpecial;
+	}
+public static boolean checkSpecial(String password){
 		int speacial = 0;
 		for(int i = 0; i < password.length(); i++){
 			char ch = password.charAt(i);
