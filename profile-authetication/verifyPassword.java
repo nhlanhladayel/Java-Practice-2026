@@ -1,4 +1,13 @@
-	public static boolean checkLower(String password){
+	public static int countLower(String password, int lowerCount){
+		for(int i = 0; i < password.length(); i++){
+			char ch = password.charAt(i);
+			if(Character.isLowerCase(ch)){
+				lowerCount++;
+			}
+		}
+		return lowerCount;
+	}
+public static boolean checkLower(String password){
 		int lower = 0;
 		for(int i = 0; i < password.length(); i++){
 			char ch = password.charAt(i);
