@@ -1,3 +1,16 @@
+public static void populateRatings(int[] userRatings, String[] serviceProviders){
+		Scanner input = new Scanner(System.in);
+		for(int i = 0; i < userRatings.length; i++){
+			System.out.print("Enter user for (1-5) for " + serviceProviders[i] + " : ");
+			userRatings[i] = input.nextInt();
+			
+			while(userRatings[i] < 1 || userRatings[i] > 5){
+				System.out.println("Invalid ratings, must be between 1 - 5");
+				System.out.print("Enter user for (1-5) for " + serviceProviders[i] + " : ");
+				userRatings[i] = input.nextInt();
+			}
+		}
+	}
 public static void populateSubscribers(int[] subscribers){
 		Random rand = new Random();
 		for(int i = 0; i < subscribers.length; i++){
