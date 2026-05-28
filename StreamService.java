@@ -1,3 +1,17 @@
+import java.util.Scanner;
+import java.util.Random;
+public class StreamService{
+	public static int searchCountry(String[] originCountry,String search){
+		Scanner input = new Scanner(System.in);
+		int index = -1;
+		for(int i = 0; i < originCountry.length; i++){		
+			if(search.equalsIgnoreCase(originCountry[i])){
+				index = i;
+				break;
+			}
+		}
+		return index;
+	}
 public static void displayStreamingServices(String[] serviceProviders, String[] originCountry, int[] subscribers, int[] userRatings){
 		System.out.println("==========================================================");
 		System.out.println("Service providers\tCountry\t\tSubscribers\tUser Ratings");
