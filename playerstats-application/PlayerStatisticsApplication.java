@@ -23,7 +23,7 @@ public class PlayerStatisticsApplication{
 			}
 		}
 	}
-public static void updateRuns(int[] runs, String[] playerNames){
+	public static void updateRuns(int[] runs, String[] playerNames){
 		Scanner kb = new Scanner(System.in);
 		System.out.print("Enter player name to update: ");
 		String player = kb.nextLine();
@@ -35,7 +35,7 @@ public static void updateRuns(int[] runs, String[] playerNames){
 			}
 		}
 	}
-public static int searchPlayer(String[] playerNames){
+	public static int searchPlayer(String[] playerNames){
 		Scanner kb = new Scanner(System.in);
 		System.out.print("Search a player: ");
 		String search = kb.nextLine();
@@ -47,14 +47,14 @@ public static int searchPlayer(String[] playerNames){
 			}
 		}
 		return index;
-	
-public static void viewPlayers(String[] playerNames, String[] country, int[] runs, int[] matches){
+	}
+	public static void viewPlayers(String[] playerNames, String[] country, int[] runs, int[] matches){
 		System.out.println("Names\t\tCountry\t\tRuns\tMatches");
 		for(int i = 0; i <  playerNames.length; i++){
 			System.out.println(playerNames[i] + "\t\t" + country[i] + "\t" + runs[i] + "\t" + matches[i]);
 		}
 	}
-public static void addPlayerStats(String[] playerNames, int[] runs, int[] matches){
+	public static void addPlayerStats(String[] playerNames, int[] runs, int[] matches){
 		Scanner kb = new Scanner(System.in);
 		for(int i = 0; i < playerNames.length; i++){
 			System.out.print("Enter runs for " + playerNames[i] + ": ");
@@ -63,7 +63,7 @@ public static void addPlayerStats(String[] playerNames, int[] runs, int[] matche
 			matches[i] = kb.nextInt();
 		}
 	}
-public static void main(String[] args){
+	public static void main(String[] args){
 		Scanner kb = new Scanner(System.in);
 		
 		String[] playerNames = {"BAVUMA", "KOHLI", "SMITH", "ROOT", "KANE", "BABAR", "RABADA"};
