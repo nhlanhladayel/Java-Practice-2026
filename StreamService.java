@@ -1,3 +1,14 @@
+public static int mostWatchedService(int[] subscribers){
+		int index = 0;
+		int high = subscribers[0];
+		for(int i = 0; i < subscribers.length; i++){
+			if(subscribers[i] > high){
+				high = subscribers[i];
+				index = i;
+			}
+		}
+		return index;
+	}
 public static void populateRatings(int[] userRatings, String[] serviceProviders){
 		Scanner input = new Scanner(System.in);
 		for(int i = 0; i < userRatings.length; i++){
