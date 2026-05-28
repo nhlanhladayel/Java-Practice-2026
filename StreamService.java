@@ -1,4 +1,11 @@
-	public static void sortServiceProvider(String[] serviceProviders, String[] originCountry, int[] subscribers, int[] userRatings){
+public static void displayStreamingServices(String[] serviceProviders, String[] originCountry, int[] subscribers, int[] userRatings){
+		System.out.println("==========================================================");
+		System.out.println("Service providers\tCountry\t\tSubscribers\tUser Ratings");
+		for(int i = 0; i < serviceProviders.length; i++){
+			System.out.println(serviceProviders[i] + "\t\t\t" + originCountry[i] + "\t\t" + subscribers[i] + "\t\t" + userRatings[i]);
+		}
+	}
+public static void sortServiceProvider(String[] serviceProviders, String[] originCountry, int[] subscribers, int[] userRatings){
 		for(int i = 0; i < serviceProviders.length - 1; i++){
 			for(int x = 0; x < serviceProviders.length - i - 1; x++){
 				if(serviceProviders[x].compareTo(serviceProviders[x+1]) > 0){
