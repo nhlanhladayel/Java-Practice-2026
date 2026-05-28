@@ -1,3 +1,16 @@
+	public static int searchPlayer(String[] playerNames){
+		Scanner kb = new Scanner(System.in);
+		System.out.print("Search a player: ");
+		String search = kb.nextLine();
+		int index = -1;
+		for(int i = 0; i < playerNames.length; i++){
+			if(search.equalsIgnoreCase(playerNames[i])){
+				index = i;
+				break;
+			}
+		}
+		return index;
+	
 public static void viewPlayers(String[] playerNames, String[] country, int[] runs, int[] matches){
 		System.out.println("Names\t\tCountry\t\tRuns\tMatches");
 		for(int i = 0; i <  playerNames.length; i++){
