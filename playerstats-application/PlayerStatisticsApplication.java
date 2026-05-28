@@ -1,4 +1,13 @@
-	public static void main(String[] args){
+public static void addPlayerStats(String[] playerNames, int[] runs, int[] matches){
+		Scanner kb = new Scanner(System.in);
+		for(int i = 0; i < playerNames.length; i++){
+			System.out.print("Enter runs for " + playerNames[i] + ": ");
+			runs[i] = kb.nextInt();
+			System.out.print("Enter matches played for " + playerNames[i] + ": ");
+			matches[i] = kb.nextInt();
+		}
+	}
+public static void main(String[] args){
 		Scanner kb = new Scanner(System.in);
 		
 		String[] playerNames = {"BAVUMA", "KOHLI", "SMITH", "ROOT", "KANE", "BABAR", "RABADA"};
