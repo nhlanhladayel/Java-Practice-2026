@@ -1,3 +1,26 @@
+	public static void sortServiceProvider(String[] serviceProviders, String[] originCountry, int[] subscribers, int[] userRatings){
+		for(int i = 0; i < serviceProviders.length - 1; i++){
+			for(int x = 0; x < serviceProviders.length - i - 1; x++){
+				if(serviceProviders[x].compareTo(serviceProviders[x+1]) > 0){
+					String tempProvide = serviceProviders[x];
+					serviceProviders[x] = serviceProviders[x+1];
+					serviceProviders[x+1] = tempProvide;
+					
+					String tempCountry = originCountry[x];
+					originCountry[x] = originCountry[x+1];
+					originCountry[x+1] = tempCountry;
+					
+					int tempSub = subscribers[x];
+					subscribers[x] =  subscribers[x+1];
+					subscribers[x+1] = tempSub;
+					
+					int tempRate = userRatings[x];
+					userRatings[x] = userRatings[x+1];
+					userRatings[x+1] = tempRate;
+				}
+			}
+		}
+	}
 public static int mostWatchedService(int[] subscribers){
 		int index = 0;
 		int high = subscribers[0];
