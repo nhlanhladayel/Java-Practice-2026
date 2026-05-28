@@ -1,4 +1,16 @@
-	public static int searchPlayer(String[] playerNames){
+public static void updateRuns(int[] runs, String[] playerNames){
+		Scanner kb = new Scanner(System.in);
+		System.out.print("Enter player name to update: ");
+		String player = kb.nextLine();
+		
+		for(int i = 0; i < playerNames.length; i++){
+			if(player.equalsIgnoreCase(playerNames[i])){
+				System.out.println("Enter new runs: ");
+				runs[i] = kb.nextInt();
+			}
+		}
+	}
+public static int searchPlayer(String[] playerNames){
 		Scanner kb = new Scanner(System.in);
 		System.out.print("Search a player: ");
 		String search = kb.nextLine();
