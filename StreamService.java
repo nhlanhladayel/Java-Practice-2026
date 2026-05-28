@@ -1,4 +1,10 @@
-	public static void main(String[] args){
+public static void populateSubscribers(int[] subscribers){
+		Random rand = new Random();
+		for(int i = 0; i < subscribers.length; i++){
+			subscribers[i] = rand.nextInt(400000) + 100000;
+		}
+	}
+public static void main(String[] args){
 		Scanner input = new Scanner(System.in);
 		
 		String[] serviceProviders = {"Youtube", "Netflix", "DSTV", "Showmax", "PrimeTV", "SABC"};
