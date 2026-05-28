@@ -1,3 +1,9 @@
+public static void viewPlayers(String[] playerNames, String[] country, int[] runs, int[] matches){
+		System.out.println("Names\t\tCountry\t\tRuns\tMatches");
+		for(int i = 0; i <  playerNames.length; i++){
+			System.out.println(playerNames[i] + "\t\t" + country[i] + "\t" + runs[i] + "\t" + matches[i]);
+		}
+	}
 public static void addPlayerStats(String[] playerNames, int[] runs, int[] matches){
 		Scanner kb = new Scanner(System.in);
 		for(int i = 0; i < playerNames.length; i++){
