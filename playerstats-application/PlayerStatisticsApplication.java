@@ -1,3 +1,28 @@
+import java.util.Scanner;
+public class PlayerStatisticsApplication{
+	public static void sortPlayers(String[] playerNames, String[] country, int[] runs, int[] matches){
+		for(int i = 0; i < playerNames.length - 1; i++){
+			for(int x = 0; x < playerNames.length - i - 1; x++){
+				if(playerNames[x].compareTo(playerNames[x+1]) > 0){
+					String tempNames = playerNames[x];
+					playerNames[x] = playerNames[x+1];
+					playerNames[x+1] = tempNames;
+					
+					String tempCountry = country[x];
+					country[x] = country[x+1];
+					country[x+1] = tempCountry;
+					
+					int tempRuns = runs[x];
+					runs[x] = runs[x+1];
+					runs[x+1] = tempRuns;
+					
+					int tempMatches = matches[x];
+					matches[x] = matches[x+1];
+					matches[x+1] = tempMatches;
+				}
+			}
+		}
+	}
 public static void updateRuns(int[] runs, String[] playerNames){
 		Scanner kb = new Scanner(System.in);
 		System.out.print("Enter player name to update: ");
